@@ -72,6 +72,7 @@ export default class Provider extends Component {
   }
 
   render() {
+    console.log("Provide with context", this.value);
     return <Context.Provider value={this.value}>{this.props.children}</Context.Provider>;
   }
 }
