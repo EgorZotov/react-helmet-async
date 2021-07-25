@@ -56,6 +56,8 @@ export class Helmet extends Component {
 
   static displayName = 'Helmet';
 
+  static contextType = Context;
+
   shouldComponentUpdate(nextProps) {
     return !fastCompare(this.props, nextProps);
   }
@@ -221,16 +223,7 @@ export class Helmet extends Component {
     if (children) {
       newProps = this.mapChildrenToProps(children, newProps);
     }
-
-    return (
-      <Context.Consumer>
-        {(
-          context // eslint-disable-next-line react/jsx-props-no-spreading
-        ) => {
-          console.log("Context consumed", context);
-          return context ? <Dispatcher {...newProps} context={context} /> : null;
-        }}
-      </Context.Consumer>
-    );
+    // eslint-disable-next-line react/jsx-props-no-spreading
+    return this.context ? <Dispatcher {...newProps} context={this.context} /> : null;
   }
 }
