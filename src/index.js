@@ -223,7 +223,6 @@ export class Helmet extends Component {
     if (children) {
       newProps = this.mapChildrenToProps(children, newProps);
     }
-    console.log("Consume the context", this.context);
     // eslint-disable-next-line react/jsx-props-no-spreading
     return this.context ? <Dispatcher {...newProps} context={this.context} /> : null;
   }
