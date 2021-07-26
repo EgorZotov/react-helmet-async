@@ -66,7 +66,9 @@
     "lint-fix": "eslint . --fix",
     "test": "NODE_ENV=test BABEL_ENV=test jest",
     "test-watch": "yarn test --watch",
-    "test-update": "yarn test -u"
+    "test-update": "yarn test -u",
+    "compile": "yarn run clean && KYT_ENV_TYPE=client NODE_ENV=production microbundle --jsx React.createElement",
+    "prepare": "yarn compile"
   },
   "husky": {
     "hooks": {
