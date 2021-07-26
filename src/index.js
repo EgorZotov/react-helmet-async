@@ -6,7 +6,7 @@ import { Context } from './Provider';
 import Dispatcher from './Dispatcher';
 import { TAG_NAMES, VALID_TAG_NAMES, HTML_TAG_MAP } from './constants';
 
-export { default as HelmetProvider } from './Provider';
+export { HelmetProvider } from './Provider';
 
 /* eslint-disable class-methods-use-this */
 
