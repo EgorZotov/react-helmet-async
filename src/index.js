@@ -5,12 +5,11 @@ import invariant from 'invariant';
 import { Context } from './Provider';
 import Dispatcher from './Dispatcher';
 import { TAG_NAMES, VALID_TAG_NAMES, HTML_TAG_MAP } from './constants';
-
-export { HelmetProvider } from './Provider';
+import HelmetProvider from './Provider';
 
 /* eslint-disable class-methods-use-this */
 
-export class Helmet extends Component {
+class Helmet extends Component {
   /**
    * @param {Object} base: {"target": "_blank", "href": "http://mysite.com/"}
    * @param {Object} bodyAttributes: {"className": "root"}
@@ -227,3 +226,5 @@ export class Helmet extends Component {
     return this.context ? <Dispatcher {...newProps} context={this.context} /> : null;
   }
 }
+
+export { HelmetProvider, Helmet };
