@@ -1,11 +1,8 @@
 {
   "name": "react-helmet-async",
-  "version": "1.4.0",
+  "version": "1.5.0",
   "description": "Thread-safe Helmet for React 16+ and friends",
-  "main": "lib/index.js",
-  "umd:main": "lib/index.umd.js",
-  "module": "lib/index.module.js",
-  "source": "src/index.js",
+  "main": "src/index.js",
   "types": "index.d.ts",
   "repository": "http://github.com/NYTimes/react-helmet-async",
   "author": "Scott Taylor <scott.c.taylor@mac.com>",
@@ -66,9 +63,7 @@
     "lint-fix": "eslint . --fix",
     "test": "NODE_ENV=test BABEL_ENV=test jest",
     "test-watch": "npm run test --watch",
-    "test-update": "npm run test -u",
-    "compile": "npm run clean && NODE_ENV=production microbundle --jsx React.createElement",
-    "prepare": "npm run compile"
+    "test-update": "npm run test -u"
   },
   "husky": {
     "hooks": {
